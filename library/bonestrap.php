@@ -262,15 +262,7 @@ function bonestrap_footer_links() {
 
 // this is the fallback for header menu
 function bonestrap_main_nav_fallback() {
-	wp_page_menu( array(
-		'show_home' => true,
-    'menu_class' => 'nav footer-nav clearfix',      // adding custom nav class
-		'include'     => '',
-		'exclude'     => '',
-		'echo'        => true,
-    'link_before' => '',                            // before each link
-    'link_after' => ''                             // after each link
-	) );
+  /* you can put a default here if you like */
 }
 
 // this is the fallback for footer menu
