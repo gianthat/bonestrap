@@ -8,12 +8,12 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title><?php wp_title(''); ?></title>
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/logo-360x360.png"/>
-		<meta property="og:title" content="<?php wp_title(''); ?>"/>
-		<meta property="og:url" content="http://efeqdev.com"/>
-		<meta property="og:description" content="" />
-		<meta property="og:site_name" content="<?php wp_title(''); ?>"/>
+		<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
+    <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/library/images/logo-360x360.png"/>
+    <meta property="og:title" content="<?php bloginfo('name'); ?> <?php wp_title(); ?>"/>
+    <meta property="og:url" content="<?php bloginfo('url'); ?>"/>
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="<?php bloginfo('name'); ?> <?php wp_title(); ?>"/>
 
 		<!-- Google Chrome Frame for IE -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
