@@ -137,32 +137,33 @@ sub {
 /* line 221, ../scss/_normalize.scss */
 img {
   border: 0;
+  max-width: 100%;
 }
 
-/* line 229, ../scss/_normalize.scss */
+/* line 230, ../scss/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 241, ../scss/_normalize.scss */
+/* line 242, ../scss/_normalize.scss */
 figure {
   margin: 0;
 }
 
-/* line 253, ../scss/_normalize.scss */
+/* line 254, ../scss/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 264, ../scss/_normalize.scss */
+/* line 265, ../scss/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
-/* line 278, ../scss/_normalize.scss */
+/* line 279, ../scss/_normalize.scss */
 button,
 input,
 select,
@@ -172,19 +173,19 @@ textarea {
   margin: 0;
 }
 
-/* line 290, ../scss/_normalize.scss */
+/* line 291, ../scss/_normalize.scss */
 button,
 input {
   line-height: normal;
 }
 
-/* line 302, ../scss/_normalize.scss */
+/* line 303, ../scss/_normalize.scss */
 button,
 select {
   text-transform: none;
 }
 
-/* line 317, ../scss/_normalize.scss */
+/* line 318, ../scss/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -193,20 +194,20 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* line 327, ../scss/_normalize.scss */
+/* line 328, ../scss/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
-/* line 337, ../scss/_normalize.scss */
+/* line 338, ../scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-/* line 348, ../scss/_normalize.scss */
+/* line 349, ../scss/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
@@ -214,26 +215,26 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-/* line 361, ../scss/_normalize.scss */
+/* line 362, ../scss/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 370, ../scss/_normalize.scss */
+/* line 371, ../scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 380, ../scss/_normalize.scss */
+/* line 381, ../scss/_normalize.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* line 393, ../scss/_normalize.scss */
+/* line 394, ../scss/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
