@@ -175,9 +175,10 @@ function wphidenag() {
 }
 
 /**
-* Define a constant path to our single template folder
+* Define a constant path to your single template folder in your configuration file - copy the line below:
+* You can also uncomment the line below, but then you will receive error messages in debug mode. Constants should be established in your configuration file, not in your functions file.
+* define(SINGLE_PATH, '/single');
 */
-define(SINGLE_PATH, TEMPLATEPATH . '/single');
 
 /**
 * Filter the single_template with our custom function
@@ -190,17 +191,19 @@ add_filter('single_template', 'my_single_template');
 function my_single_template($single) {
     global $wp_query, $post;
 
+    // You must declare a SINGLE_PATH constant in your configuration file: define(SINGLE_PATH, "/single");
+    $theme_path = TEMPLATEPATH . SINGLE_PATH;
     /**
     * Checks for single template by ID
     */
-    if(file_exists(SINGLE_PATH . '/single-' . $post->ID . '.php'))
-        return SINGLE_PATH . '/single-' . $post->ID . '.php';
+    if(file_exists($theme_path . '/single-' . $post->ID . '.php'))
+        return $theme_path . '/single-' . $post->ID . '.php';
 
     /**
     * Checks for single template by post type
     */
-    if(file_exists(SINGLE_PATH . '/single-' . $post->post_type . '.php'))
-        return SINGLE_PATH . '/single-' . $post->post_type . '.php';
+    if(file_exists($theme_path . '/single-' . $post->post_type . '.php'))
+        return $theme_path . '/single-' . $post->post_type . '.php';
 
     /**
     * Checks for single template by category
@@ -208,11 +211,11 @@ function my_single_template($single) {
     */
     foreach((array)get_the_category() as $cat) :
 
-        if(file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
-            return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
+        if(file_exists($theme_path . '/single-cat-' . $cat->slug . '.php'))
+            return $theme_path . '/single-cat-' . $cat->slug . '.php';
 
-        elseif(file_exists(SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php'))
-            return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
+        elseif(file_exists($theme_path . '/single-cat-' . $cat->term_id . '.php'))
+            return $theme_path . '/single-cat-' . $cat->term_id . '.php';
 
     endforeach;
 
@@ -221,15 +224,17 @@ function my_single_template($single) {
     * Check by tag slug and ID
     */
     $wp_query->in_the_loop = true;
-    foreach((array)get_the_tags() as $tag) :
+    if(get_the_tags()){
+        foreach((array)get_the_tags() as $tag) :
 
-        if(file_exists(SINGLE_PATH . '/single-tag-' . $tag->slug . '.php'))
-            return SINGLE_PATH . '/single-tag-' . $tag->slug . '.php';
+            if(file_exists($theme_path . '/single-tag-' . $tag->slug . '.php'))
+                return $theme_path . '/single-tag-' . $tag->slug . '.php';
 
-        elseif(file_exists(SINGLE_PATH . '/single-tag-' . $tag->term_id . '.php'))
-            return SINGLE_PATH . '/single-tag-' . $tag->term_id . '.php';
+            elseif(file_exists($theme_path . '/single-tag-' . $tag->term_id . '.php'))
+                return $theme_path . '/single-tag-' . $tag->term_id . '.php';
 
-    endforeach;
+        endforeach;
+    }
     $wp_query->in_the_loop = false;
 
     /**
@@ -238,20 +243,20 @@ function my_single_template($single) {
     */
     $curauth = get_userdata($wp_query->post->post_author);
 
-    if(file_exists(SINGLE_PATH . '/single-author-' . $curauth->user_nicename . '.php'))
-        return SINGLE_PATH . '/single-author-' . $curauth->user_nicename . '.php';
+    if(file_exists($theme_path . '/single-author-' . $curauth->user_nicename . '.php'))
+        return $theme_path . '/single-author-' . $curauth->user_nicename . '.php';
 
-    elseif(file_exists(SINGLE_PATH . '/single-author-' . $curauth->ID . '.php'))
-        return SINGLE_PATH  . '/single-author-' . $curauth->ID . '.php';
+    elseif(file_exists($theme_path . '/single-author-' . $curauth->ID . '.php'))
+        return $theme_path  . '/single-author-' . $curauth->ID . '.php';
 
     /**
     * Checks for default single post files within the single folder
     */
-    if(file_exists(SINGLE_PATH . '/single.php'))
-        return SINGLE_PATH . '/single.php';
+    if(file_exists($theme_path . '/single.php'))
+        return $theme_path . '/single.php';
 
-    elseif(file_exists(SINGLE_PATH . '/default.php'))
-        return SINGLE_PATH . '/default.php';
+    elseif(file_exists($theme_path . '/default.php'))
+        return $theme_path . '/default.php';
 
     return $single;
 
