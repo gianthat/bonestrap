@@ -144,6 +144,9 @@ function bonestrap_scripts_and_styles() {
 
     //adding scripts file in the footer
     wp_register_script( 'bonestrap-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+    
+    // adding bootstrap.min.js in the footer
+    wp_register_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/library/js/libs/bootstrap.min.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
     wp_enqueue_script( 'bonestrap-modernizr' );
@@ -151,6 +154,7 @@ function bonestrap_scripts_and_styles() {
     //wp_enqueue_style('bonestrap-ie-only');
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'bonestrap-js' );
+    wp_enqueue_script( 'bootstrap-js' );
     // wp_enqueue_script( 'gsensor' );
     // wp_enqueue_script( 'gmaps' );
 
