@@ -61,6 +61,16 @@
   > li > a > img {
     max-width: none;
   }
+  // Sets li inline-block for 768+
+  @media(min-width: $grid-float-breakpoint) {
+    > li {
+      display: inline-block;
+      border: none;
+      > a {
+
+      }
+    }
+  }
 }
 
 
