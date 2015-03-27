@@ -16,6 +16,7 @@
 @import "tables";
 @import "forms";
 @import "buttons";
+@import "typography";
 
 // Components
 @import "component-animations";
@@ -54,8 +55,6 @@ GENERAL STYLES
 
 body {
   font-family: $font-family-sans-serif;
-  font-size: 10px; // Set font to 10px so multiplying is easy peasy.
-  line-height: 1.5;
   color: $text-color;
 }
 
@@ -138,47 +137,6 @@ a, a:visited {
     */
     -webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
   }
-}
-
-/******************************************************************
-H1, H2, H3, H4, H5 STYLES
-******************************************************************/
-
-h1, h2, h3, h4, h5 {
-  font-family: $font-family-sans-serif;
-  text-rendering: optimizelegibility;
-  font-weight: lighter;
-  line-height: 1em;
-  /*
-  if you're going to use webfonts, be sure to check your weights
-  http://css-tricks.com/watch-your-font-weight/
-  */
-
-  /* removing text decoration from all headline links */
-  a {
-    text-decoration: none;
-  }
-}
-
-h1 {
-  font-size: 4.8em;
-}
-
-h2 {
-  font-size: 3.6em;
-}
-
-h3 {
-  font-size: 2.4em;
-}
-
-h4 {
-  font-size: 2em;
-}
-
-h5 {
-  font-size: 1.6em;
-  line-height: 2.09em;
 }
 
 /*********************

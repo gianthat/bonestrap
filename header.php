@@ -22,6 +22,9 @@
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"/>
+		
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 		<!-- icons & favicons (for more: http://themble.com/support/adding-icons-favicons/) -->
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png" type="image/png">
