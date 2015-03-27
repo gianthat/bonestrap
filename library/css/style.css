@@ -1,5 +1,138 @@
 @import url("//fonts.googleapis.com/css?family=Raleway:400,700");
 @import url("//fonts.googleapis.com/css?family=Cabin:400,600,700,500italic");
+/* line 5, ../scss/_typography.scss */
+body {
+  font-size: 100%;
+}
+
+/* line 9, ../scss/_typography.scss */
+body, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0;
+}
+
+/* Body Content */
+/* line 15, ../scss/_typography.scss */
+#content {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+}
+
+@media (min-width: 43.75em) {
+  /* line 23, ../scss/_typography.scss */
+  #content {
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
+}
+/* line 33, ../scss/_typography.scss */
+h1 {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */
+}
+
+@media (min-width: 43.75em) {
+  /* line 41, ../scss/_typography.scss */
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+}
+@media (min-width: 56.25em) {
+  /* line 49, ../scss/_typography.scss */
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height 
+    and something more appropriate for display headings */
+  }
+}
+/* line 60, ../scss/_typography.scss */
+h2 {
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */
+}
+
+@media (min-width: 43.75em) {
+  /* line 68, ../scss/_typography.scss */
+  h2 {
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+}
+@media (min-width: 56.25em) {
+  /* line 76, ../scss/_typography.scss */
+  h2 {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
+}
+/* line 85, ../scss/_typography.scss */
+h3 {
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */
+}
+
+@media (min-width: 43.75em) {
+  /* line 93, ../scss/_typography.scss */
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+}
+@media (min-width: 56.25em) {
+  /* line 101, ../scss/_typography.scss */
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+/* line 110, ../scss/_typography.scss */
+h4 {
+  font-size: 1.125em;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111;
+}
+
+@media (min-width: 43.75em) {
+  /* line 117, ../scss/_typography.scss */
+  h4 {
+    line-height: 1.22222222;
+    /* (22px / 18px */
+  }
+}
+/* line 125, ../scss/_typography.scss */
+blockquote {
+  font-size: 1.25em;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */
+}
+
+@media (min-width: 43.75em) {
+  /* line 133, ../scss/_typography.scss */
+  blockquote {
+    font-size: 1.5em;
+    /* 24px / 16px = */
+    line-height: 1.45833333;
+    /* 35px / 24px */
+  }
+}
 /*! normalize.css v2.1.0 | MIT License | git.io/normalize */
 /* line 22, ../scss/_normalize.scss */
 article,
@@ -2711,139 +2844,6 @@ input[type="button"].btn-block {
   width: 100%;
 }
 
-/* line 5, ../scss/_typography.scss */
-body {
-  font-size: 100%;
-}
-
-/* line 9, ../scss/_typography.scss */
-body, h1, h2, h3, h4, h5, h6 {
-  font-size-adjust: 0;
-}
-
-/* Body Content */
-/* line 15, ../scss/_typography.scss */
-#content {
-  font-size: 1em;
-  /* equivalent to 16px */
-  line-height: 1.25;
-  /* equivalent to 20px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 23, ../scss/_typography.scss */
-  #content {
-    font-size: 1em;
-    /* equivalent to 16px */
-    line-height: 1.375;
-    /* equivalent to 22px */
-  }
-}
-/* line 33, ../scss/_typography.scss */
-h1 {
-  font-size: 2em;
-  /* 2x body copy size = 32px */
-  line-height: 1.25;
-  /* 45px / 36px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 41, ../scss/_typography.scss */
-  h1 {
-    font-size: 2.5em;
-    /* 2.5x body copy size = 40px */
-    line-height: 1.125;
-  }
-}
-@media (min-width: 56.25em) {
-  /* line 49, ../scss/_typography.scss */
-  h1 {
-    font-size: 3em;
-    /* 3x body copy size = 48px */
-    line-height: 1.05;
-    /* keep to a multiple of the 20px line height 
-    and something more appropriate for display headings */
-  }
-}
-/* line 60, ../scss/_typography.scss */
-h2 {
-  font-size: 1.625em;
-  /* 1.625x body copy size = 26px */
-  line-height: 1.15384615;
-  /* 30px / 26px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 68, ../scss/_typography.scss */
-  h2 {
-    font-size: 2em;
-    /* 2x body copy size = 32px */
-    line-height: 1.25;
-  }
-}
-@media (min-width: 56.25em) {
-  /* line 76, ../scss/_typography.scss */
-  h2 {
-    font-size: 2.25em;
-    /* 2.25x body copy size = 36px */
-    line-height: 1.25;
-  }
-}
-/* line 85, ../scss/_typography.scss */
-h3 {
-  font-size: 1.375em;
-  /* 1.375x body copy size = 22px */
-  line-height: 1.13636364;
-  /* 25px / 22px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 93, ../scss/_typography.scss */
-  h3 {
-    font-size: 1.5em;
-    /* 1.5x body copy size = 24px */
-    line-height: 1.25;
-  }
-}
-@media (min-width: 56.25em) {
-  /* line 101, ../scss/_typography.scss */
-  h3 {
-    font-size: 1.75em;
-    /* 1.75x body copy size = 28px */
-    line-height: 1.25;
-  }
-}
-/* line 110, ../scss/_typography.scss */
-h4 {
-  font-size: 1.125em;
-  /* 1.125x body copy size = 18px */
-  line-height: 1.11111111;
-}
-
-@media (min-width: 43.75em) {
-  /* line 117, ../scss/_typography.scss */
-  h4 {
-    line-height: 1.22222222;
-    /* (22px / 18px */
-  }
-}
-/* line 125, ../scss/_typography.scss */
-blockquote {
-  font-size: 1.25em;
-  /* 20px / 16px */
-  line-height: 1.25;
-  /* 25px / 20px */
-}
-
-@media (min-width: 43.75em) {
-  /* line 133, ../scss/_typography.scss */
-  blockquote {
-    font-size: 1.5em;
-    /* 24px / 16px = */
-    line-height: 1.45833333;
-    /* 35px / 24px */
-  }
-}
 /* line 10, ../scss/_component-animations.scss */
 .fade {
   opacity: 0;

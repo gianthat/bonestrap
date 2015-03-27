@@ -1,6 +1,7 @@
 // Add Bootstrap styles
 
 // Core variables and mixins
+@import "typography";
 @import "variables";
 @import "mixins";
 
@@ -16,7 +17,6 @@
 @import "tables";
 @import "forms";
 @import "buttons";
-@import "typography";
 
 // Components
 @import "component-animations";
